@@ -21,8 +21,6 @@ app.use(bodyParser.json());
 
 app.use('/', routes);
 
-
-
 models.db.sync({force:true})
 .then(function() {
     app.listen(3000, function() {
