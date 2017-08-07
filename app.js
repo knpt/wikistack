@@ -14,7 +14,7 @@ app.set('view engine', 'html');
 // when res.render works with html files, have it use nunjucks to do so
 app.engine('html', nunjucks.render);
 
-app.use(morgan('dev'));
+
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
@@ -28,3 +28,6 @@ models.db.sync({force:true})
     });
 });
 
+
+
+app.use(morgan('dev'));
